@@ -49,4 +49,10 @@ To run the project, you can just run the `CucumberTestSuite` test runner class f
 
 run `gradle test` from the command line or
 
-right click the specific feature file --> Click Run the feature file
+right click the specific feature file --> Click -->Run the feature file
+
+## Reporting
+
+The Serenity reports will be generated in the `target/site/serenity` directory.
+
+Open -->index.html --> In any browsers

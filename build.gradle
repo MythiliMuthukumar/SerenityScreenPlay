@@ -51,6 +51,7 @@ dependencies {
             "net.serenity-bdd:serenity-cucumber5:${serenityCucumberVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
             "io.cucumber:cucumber-core:${cucumberVersion}",
             "io.cucumber:cucumber-junit:${cucumberVersion}"
 }
