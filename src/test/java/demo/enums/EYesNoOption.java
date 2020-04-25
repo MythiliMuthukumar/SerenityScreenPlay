@@ -14,9 +14,9 @@ public enum EYesNoOption {
 
     public static EYesNoOption fromString(String name)
     {
-        for (EYesNoOption sortByOption : values()) {
-            if (sortByOption.option.equalsIgnoreCase(name)) {
-                return sortByOption;
+        for (EYesNoOption yesNoOption : values()) {
+            if (yesNoOption.option.equalsIgnoreCase(name)) {
+                return yesNoOption;
             }
         }
         throw new IllegalArgumentException("No option found with: " + name);

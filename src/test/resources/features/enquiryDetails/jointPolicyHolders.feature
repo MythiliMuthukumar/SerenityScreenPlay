@@ -7,6 +7,7 @@ Feature: Home Insurance Enquiry Form - Joint Policy Holder Details
     Then he should see the policyholder question "Yes" button
     Then he should see the policyholder question "No" button
 
+  @manual
   Scenario: Enquiry Details page - Clicking Yes button function correctly
     Given "John" is on the home insurance enquiry details page
     When he click Joint policyholder question yes option
@@ -15,6 +16,7 @@ Feature: Home Insurance Enquiry Form - Joint Policy Holder Details
     Then he should see the Add Details screen "cancel" button
     Then he should see the Add Details screen "save" button
 
+  @manual
   Scenario: Enquiry Details page - Clicking Yes button function correctly
     Given "John" is on the home insurance enquiry details page
     And he click Joint policyholder question yes option
