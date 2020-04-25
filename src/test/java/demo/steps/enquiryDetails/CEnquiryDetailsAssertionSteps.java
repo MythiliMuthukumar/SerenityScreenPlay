@@ -1,5 +1,6 @@
 package demo.steps.enquiryDetails;
 
+import demo.exceptions.CEnquiryFormDetailsPageException;
 import demo.userInterface.enquiryDetailsPage.CEnquiryDetailsLocators;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.ensure.Ensure;
@@ -34,11 +35,17 @@ public class CEnquiryDetailsAssertionSteps {
                 seeTheHeadings(headings)
         );
     }
+
+    @Then("he should see the {string} validation message")
+    public void heShouldSeeTheValidationMessage(String validationMessage) {
+        theActorInTheSpotlight().attemptsTo(Ensure.that(CEnquiryDetailsLocators.VALIDATION_MESSAGE).text().isEqualTo(validationMessage));
+    }
     @Then("he should see {string} button")
     public void actorShouldSeeButton(String compareQuoteButton) {
         theActorInTheSpotlight().should(
                 seeThat(the(CEnquiryDetailsLocators.COMPARE_QUOTES_BUTTON),isPresent()
-                ));
+                ).orComplainWith(CEnquiryFormDetailsPageException.class,
+                        String.format("Missing Button '%s'", compareQuoteButton)));
     }
 
     @Then("he should see the validation messages for {int} fields")
@@ -48,4 +55,5 @@ public class CEnquiryDetailsAssertionSteps {
                         .hasSize(noOfValidationMessage)
         );
     }
+
 }

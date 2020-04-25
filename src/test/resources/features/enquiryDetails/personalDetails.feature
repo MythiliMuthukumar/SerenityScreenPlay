@@ -1,6 +1,11 @@
 @ui
 Feature: Home Insurance Enquiry Form - About you section
 
+  Scenario: Enquiry Details page - Select Title from dropdown
+    Given "John" is on the home insurance enquiry details page
+    When he select "Mr" from title dropdown
+    Then he should see "Mr" value in the title field
+
   Scenario: Enquiry Details page - First Name field verification
     Given "John" is on the home insurance enquiry details page
     When he enters first name as "John"

@@ -26,10 +26,6 @@ public class CPersonalDetailsAssertionSteps {
         theActorInTheSpotlight().attemptsTo(Ensure.that(CPersonalDetailsSectionLocators.FIRST_NAME).value().isEqualTo(firstName));
     }
 
-    @Then("he should see the {string} validation message")
-    public void heShouldSeeTheValidationMessage(String validationMessage) {
-        theActorInTheSpotlight().attemptsTo(Ensure.that(CEnquiryDetailsLocators.VALIDATION_MESSAGE).text().isEqualTo(validationMessage));
-    }
 
     @Then("he should see all the available personal details help button")
     public void heShouldSeeAllTheAvailablePersonalDetailsHelpButton() {
@@ -45,4 +41,10 @@ public class CPersonalDetailsAssertionSteps {
 
     }
 
+    @Then("he should see {string} value in the title field")
+    public void heShouldSeeValueInTheTitleField(String title) {
+        theActorInTheSpotlight().attemptsTo(
+                Ensure.that(CPersonalDetailsSectionLocators.TITLE).selectedVisibleText().isEqualTo(title)
+                );
+    }
 }
