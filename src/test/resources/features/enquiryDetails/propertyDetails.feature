@@ -12,14 +12,14 @@ Feature: Home Insurance Enquiry Form - Property Details
 
   Scenario: Enquiry Details page - Property Address field shows enter manual address button & suggestion dropdown
     Given "John" is on the home insurance enquiry details page
-    When he starts enter the address "EC" in the property address field
+    When he starts to enter the address "EC" in the property address field
     Then he should see the "Enter address manually" button
     Then he should see the address suggestion dropdown
 
   @manual
-  Scenario: Enquiry Details page - Property details manual entry address fields
+  Scenario: Enquiry Details page - Shows Property details manual entry address fields
     Given "John" is on the home insurance enquiry details page
-    When he starts enter the address "EC" in the property address field
+    When he starts to enter the address "EC" in the property address field
     And he click the "Enter address manually" button
     Then he should see the label and empty field for "Address line 1"
     Then he should see the label and empty field for "Address line 2"
@@ -31,7 +31,7 @@ Feature: Home Insurance Enquiry Form - Property Details
   @manual
   Scenario: Enquiry Details page - Property manual address field cancel/save button
     Given "John" is on the home insurance enquiry details page
-    When he starts enter the address "EC" in the property address field
+    When he starts to enter the address "EC" in the property address field
     And he click the "Enter address manually" button
     Then he should see the address section "cancel" button
     Then he should see the address section "save" button

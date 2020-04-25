@@ -1,10 +1,9 @@
 package demo.questions.enquiryFormDetails;
 
-import demo.userInterface.enquiryDetailsPage.CEnquiryDetailsLocators;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
+import demo.userInterface.enquiryDetailsPage.CEnquiryDetailsCommonLocators;
 import net.serenitybdd.screenplay.Consequence;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
@@ -23,7 +22,7 @@ public class CEnquiryDetailsScreen {
 
     public static Consequence[] seeTheHeadings(List<String> headings) {
         return headings.stream().map(
-                heading -> seeThat(the(CEnquiryDetailsLocators.HEADINGS.of(heading)), isVisible())
+                heading -> seeThat(the(CEnquiryDetailsCommonLocators.HEADINGS.of(heading)), isVisible())
         ).collect(Collectors.toList()).toArray(new Consequence[]{});
     }
 
@@ -35,11 +34,11 @@ public class CEnquiryDetailsScreen {
 
     public static Consequence[] seeTheStages(List<String> stages) {
         return stages.stream().map(
-                heading -> seeThat(the(CEnquiryDetailsLocators.STAGES.of(heading)), isVisible())
+                heading -> seeThat(the(CEnquiryDetailsCommonLocators.STAGES.of(heading)), isVisible())
         ).collect(Collectors.toList()).toArray(new Consequence[]{});
     }
 
     public static Question<String> validationMessage() {
-        return actor -> Text.of(CEnquiryDetailsLocators.VALIDATION_MESSAGE).viewedBy(actor).asString();
+        return actor -> Text.of(CEnquiryDetailsCommonLocators.VALIDATION_MESSAGE).viewedBy(actor).asString();
     }
 }

@@ -1,10 +1,8 @@
 package demo.steps.enquiryDetails.propertyDetailsSteps;
 
 import demo.exceptions.CEnquiryFormDetailsPageException;
-import demo.userInterface.enquiryDetailsPage.CEnquiryDetailsLocators;
 import demo.userInterface.enquiryDetailsPage.CPropertyDetailsLocators;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;

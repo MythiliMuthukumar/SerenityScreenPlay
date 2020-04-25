@@ -1,6 +1,6 @@
 package demo.tasks.enquiryFormDetails.enterPropertyDetails;
 
-import demo.userInterface.enquiryDetailsPage.CPersonalDetailsSectionLocators;
+
 import demo.userInterface.enquiryDetailsPage.CPropertyDetailsLocators;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;

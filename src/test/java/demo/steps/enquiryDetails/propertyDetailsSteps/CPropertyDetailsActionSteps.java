@@ -11,7 +11,7 @@ public class CPropertyDetailsActionSteps {
         theActorInTheSpotlight().attemptsTo(CEnterPropertyAddressDetails.enterWithoutPropertyAddress());
     }
 
-    @When("he starts enter the address {string} in the property address field")
+    @When("he starts to enter the address {string} in the property address field")
     public void heStartsTypingTheAddressInThePropertyAddressField(String propertyAddress) {
         theActorInTheSpotlight().attemptsTo(CEnterPropertyAddressDetails.startTypingPropertyAddress(propertyAddress));
     }

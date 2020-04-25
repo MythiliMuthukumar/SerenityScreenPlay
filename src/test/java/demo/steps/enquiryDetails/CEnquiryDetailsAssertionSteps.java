@@ -1,7 +1,7 @@
 package demo.steps.enquiryDetails;
 
 import demo.exceptions.CEnquiryFormDetailsPageException;
-import demo.userInterface.enquiryDetailsPage.CEnquiryDetailsLocators;
+import demo.userInterface.enquiryDetailsPage.CEnquiryDetailsCommonLocators;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
@@ -13,6 +13,7 @@ import static demo.questions.enquiryFormDetails.CEnquiryDetailsScreen.seeTheStag
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
 public class CEnquiryDetailsAssertionSteps {
@@ -38,12 +39,12 @@ public class CEnquiryDetailsAssertionSteps {
 
     @Then("he should see the {string} validation message")
     public void heShouldSeeTheValidationMessage(String validationMessage) {
-        theActorInTheSpotlight().attemptsTo(Ensure.that(CEnquiryDetailsLocators.VALIDATION_MESSAGE).text().isEqualTo(validationMessage));
+        theActorInTheSpotlight().attemptsTo(Ensure.that(CEnquiryDetailsCommonLocators.VALIDATION_MESSAGE).text().isEqualTo(validationMessage));
     }
     @Then("he should see {string} button")
     public void actorShouldSeeButton(String compareQuoteButton) {
         theActorInTheSpotlight().should(
-                seeThat(the(CEnquiryDetailsLocators.COMPARE_QUOTES_BUTTON),isPresent()
+                seeThat(the(CEnquiryDetailsCommonLocators.COMPARE_QUOTES_BUTTON),isPresent()
                 ).orComplainWith(CEnquiryFormDetailsPageException.class,
                         String.format("Missing Button '%s'", compareQuoteButton)));
     }
@@ -51,9 +52,14 @@ public class CEnquiryDetailsAssertionSteps {
     @Then("he should see the validation messages for {int} fields")
     public void heShouldSeeTheValidationMessagesForFields(int noOfValidationMessage) {
         theActorInTheSpotlight().attemptsTo(
-                Ensure.thatTheSetOf(CEnquiryDetailsLocators.VALIDATION_MESSAGE)
+                Ensure.thatTheSetOf(CEnquiryDetailsCommonLocators.VALIDATION_MESSAGE)
                         .hasSize(noOfValidationMessage)
         );
     }
 
+    @Then("he should see the {string} question")
+    public void heShouldSeeQuestion(String policyHolderquestion) {
+        theActorInTheSpotlight().should(
+                seeThat(the(CEnquiryDetailsCommonLocators.QUESTION_LABEL.of(policyHolderquestion)), isVisible()));
+    }
 }
