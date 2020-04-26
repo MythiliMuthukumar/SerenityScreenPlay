@@ -1,5 +1,5 @@
 @ui
-Feature: Home Insurance Enquiry Form - Property Details
+Feature: Home Insurance Enquiry Form - Property Details Section
 
   Scenario: Enquiry Details page - Property Address field shows text message
     Given "John" is on the home insurance enquiry details page

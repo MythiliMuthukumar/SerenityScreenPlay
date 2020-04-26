@@ -1,5 +1,5 @@
 @ui
-Feature: Home Insurance Enquiry Form - Cover Details
+Feature: Home Insurance Enquiry Form - Cover Details Section
 
   Scenario: Enquiry Details page - Shows Cover details question, Today & Tomorrow option
     Given "John" is on the home insurance enquiry details page

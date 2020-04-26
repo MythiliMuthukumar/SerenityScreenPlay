@@ -1,5 +1,5 @@
 package demo.steps.enquiryDetails.insuranceHistorySteps;
 
-public class CInsuranceHistoryActionSteps {
+public class CInsuranceHistoryTaskSteps {
     //TODO
 }

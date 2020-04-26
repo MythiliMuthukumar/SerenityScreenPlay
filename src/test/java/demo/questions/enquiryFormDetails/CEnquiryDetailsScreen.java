@@ -5,8 +5,6 @@ import java.util.stream.Collectors;
 
 import demo.userInterface.enquiryDetailsPage.CEnquiryDetailsCommonLocators;
 import net.serenitybdd.screenplay.Consequence;
-import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.questions.Text;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
@@ -38,7 +36,4 @@ public class CEnquiryDetailsScreen {
         ).collect(Collectors.toList()).toArray(new Consequence[]{});
     }
 
-    public static Question<String> validationMessage() {
-        return actor -> Text.of(CEnquiryDetailsCommonLocators.VALIDATION_MESSAGE).viewedBy(actor).asString();
-    }
 }

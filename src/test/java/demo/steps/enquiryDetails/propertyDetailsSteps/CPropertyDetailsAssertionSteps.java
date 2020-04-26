@@ -2,6 +2,7 @@ package demo.steps.enquiryDetails.propertyDetailsSteps;
 
 import demo.exceptions.CEnquiryFormDetailsPageException;
 import demo.userInterface.enquiryDetailsPage.CPropertyDetailsLocators;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
@@ -32,5 +33,13 @@ public class CPropertyDetailsAssertionSteps {
                 seeThat(the(CPropertyDetailsLocators.ADDRESS_SUGGESTION_DROPDOWN),isPresent()
                 ).orComplainWith(CEnquiryFormDetailsPageException.class,
                         ("Missing Property Address suggestion dropdown")));
+    }
+
+    @Then("he should see the label and empty field for {string}")
+    public void heShouldSeeTheLabelAndEmptyFieldFor(String arg0) {
+    }
+
+    @Then("he should see the address section {string} button")
+    public void heShouldSeeTheAddressSectionButton(String arg0) {
     }
 }

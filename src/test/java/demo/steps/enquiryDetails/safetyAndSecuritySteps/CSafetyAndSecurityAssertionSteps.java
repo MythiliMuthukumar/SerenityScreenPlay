@@ -43,4 +43,8 @@ public class CSafetyAndSecurityAssertionSteps {
             );
         });
     }
+
+    @Then("he should see the Self-contained question {string} button")
+    public void heShouldSeeTheSelfContainedQuestionButton(String arg0) {
+    }
 }

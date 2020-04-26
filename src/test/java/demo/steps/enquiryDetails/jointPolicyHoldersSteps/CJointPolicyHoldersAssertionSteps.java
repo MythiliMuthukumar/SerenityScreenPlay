@@ -4,6 +4,7 @@ import demo.enums.EYesNoOption;
 import demo.exceptions.CEnquiryFormDetailsPageException;
 import demo.userInterface.enquiryDetailsPage.CJointPolicyHoldersLocators;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -28,4 +29,22 @@ public class CJointPolicyHoldersAssertionSteps {
         }
 
     }
+
+    @Then("he should see the {string} dialog screen")
+    public void heShouldSeeTheDialogScreen(String arg0) {
+    }
+
+    @Then("he should see Add Details screen {string} option")
+    public void heShouldSeeAddDetailsScreenOption(String arg0) {
+    }
+
+    @Then("he should see the Add Details screen {string} button")
+    public void heShouldSeeTheAddDetailsScreenButton(String arg0) {
+    }
+
+
+    @Then("he should see the Add Joint policyholders button")
+    public void heShouldSeeTheAddJointPolicyholdersButton() {
+    }
+
 }

@@ -1,4 +1,4 @@
-package demo.tasks.enquiryFormDetails.enterPropertyDetails;
+package demo.tasks.enquiryFormDetails.propertyDetails;
 
 
 import demo.userInterface.enquiryDetailsPage.CPropertyDetailsLocators;
@@ -12,7 +12,7 @@ import static org.openqa.selenium.Keys.RETURN;
 
 public class CEnterPropertyAddressDetails {
     public static Performable enterWithoutPropertyAddress() {
-        return Task.where("{0} Without entering his property address ",
+        return Task.where("{0} Click on another field without entering his property address ",
                 Clear.field(CPropertyDetailsLocators.PROPERTY_ADDRESS),
                 Click.on(CPropertyDetailsLocators.PROPERTY_ADDRESS),
                 Click.on(CPropertyDetailsLocators.CORRESPONDENCE_ADDRESS)

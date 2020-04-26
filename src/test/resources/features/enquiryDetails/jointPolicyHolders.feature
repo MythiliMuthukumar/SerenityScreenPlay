@@ -1,5 +1,5 @@
 @ui
-Feature: Home Insurance Enquiry Form - Joint Policy Holder Details
+Feature: Home Insurance Enquiry Form - Joint Policy Holder Details Section
 
   Scenario: Enquiry Details page - Shows the Joint Policy holder question, Yes & No option
     Given "John" is on the home insurance enquiry details page

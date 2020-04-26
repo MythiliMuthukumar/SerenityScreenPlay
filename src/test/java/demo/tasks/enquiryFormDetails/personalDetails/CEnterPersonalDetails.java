@@ -1,4 +1,4 @@
-package demo.tasks.enquiryFormDetails.enterPersonalDetails;
+package demo.tasks.enquiryFormDetails.personalDetails;
 
 import demo.userInterface.enquiryDetailsPage.CPersonalDetailsSectionLocators;
 import net.serenitybdd.screenplay.Performable;
@@ -18,10 +18,15 @@ public class CEnterPersonalDetails {
     }
 
     public static Performable enterWithoutFirstName() {
-        return Task.where("{0} Without Entering his First Name ",
+        return Task.where("{0} Clicks another field without entering his first name ",
                 Clear.field(CPersonalDetailsSectionLocators.FIRST_NAME),
                 Click.on(CPersonalDetailsSectionLocators.FIRST_NAME),
                 Click.on(CPersonalDetailsSectionLocators.LAST_NAME)
         );
+    }
+    public static Performable selectTitleFromDropDown(String titleOption) {
+        return Task.where("{0} Select title from dropdown ",
+                SelectFromOptions.byVisibleText(titleOption)
+                        .from(CPersonalDetailsSectionLocators.TITLE));
     }
 }
