@@ -10,7 +10,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
-public class CStatementAboutYouAssertionSteps {
+public class CStatementsAboutYouAssertionSteps {
 
     @Then("he should see {string} button is selected")
     public void heShouldSeeAgreeDisagreeButtonIsSelected(String agreeDisagreeButton) {
